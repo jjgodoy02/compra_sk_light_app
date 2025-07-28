@@ -15,6 +15,13 @@ import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 import io
 
+
+correct_password = st.secrets['auth']["password"]
+password = st.text_input("Ingrese la contraseña:", type="password")
+
+if password != correct_password:
+    st.error("Contraseña incorrecta.")
+    st.stop()
 # ─────────────────────────────────────────────────────────────────────────────
 # 2. Funciones de carga de datos
 # ─────────────────────────────────────────────────────────────────────────────
